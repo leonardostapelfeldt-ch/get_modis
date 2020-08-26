@@ -32,7 +32,7 @@ Example commands to download version 6 of the MOD10A1 or MOD09GA products, held 
 
 .. code-block: bash
 
-$ get_modis.py -u <earthdata_username> -P <earthdata_password> -s MOST -l NSIDC -t h16v02 -b 200 -e 202 -y 2016 -v -p MOD10A1.006
+$ ./get_modis.py -u <earthdata_username> -P <earthdata_password> -s MOST -l NSIDC -t h16v02 -b 200 -e 202 -y 2016 -v -p MOD10A1.006
 
 $ ./get_modis.py -u horst.machguth@unifr.ch -P <earthdata_password> -s MOST -l NSIDC -t h16v02 -b 200 -e 202 -y 2016 -o /home/horstm/erc/sat_modis_raw -v -p MOD10A1.006
 
