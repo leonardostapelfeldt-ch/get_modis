@@ -9,9 +9,9 @@ import platform
 osys = platform.system()
 print('operating system is %s' %osys)
 
-yr_start = 2001
+yr_start = 2020
 #yr_end = 2019
-yr_end = 2002
+yr_end = 2020
 
 d_start = 120 # first day
 d_end = 280 # last day
@@ -22,7 +22,7 @@ pw = 'my_password'
 if osys != 'Windows':
     outdir = '/home/horstm/erc/sat_modis_raw'
 else:
-    outdir = r'E:/MODIS/sat_modis_raw_test'
+    outdir = r'E:/MODIS/sat_modis_raw'
 
 tiles = ['h15v02','h16v02']
 
@@ -37,7 +37,7 @@ for t in tiles:
                    ' -b ' + str(d_start) + ' -e ' + str(d_end) + ' -y ' + str(int(y)) +\
                    ' -o ' + outdir + ' -v -p MOD10A1.006'
         else:
-            cmd = r'C:\horst\src\py\get_modis\get_modis.py -u ' + user + \
+            cmd = r'python C:\horst\src\py\get_modis\get_modis.py -u ' + user + \
                   ' -P ' + pw + ' -s MOST -l NSIDC -t ' + t + \
                   ' -b ' + str(d_start) + ' -e ' + str(d_end) + ' -y ' + str(int(y)) + \
                   ' -o ' + outdir + ' -v -p MOD10A1.006'
