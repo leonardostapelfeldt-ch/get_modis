@@ -38,6 +38,10 @@ $ ./get_modis.py -u horst.machguth@unifr.ch -P <earthdata_password> -s MOST -l N
 
 $ ./get_modis.py -u horst.machguth@unifr.ch -P <earthdata_password> -s MOLT -l USGS -t h16v02 -b 200 -e 202 -y 2016 -o /home/horstm/erc/sat_modis_raw -v -p MOD09GA.006
 
+To download MODIS Terra 250 m 15 days NDVI product:
+
+$ ./get_modis.py -u horst.machguth@unifr.ch -P <earthdata_password> -v -p MOD13Q1.006 -s MOLT -l USGS -y 2015 -t h18v04 -o D:/MODIS/sat_modis_raw -b 200 -e 230
+
 You will need a NASA EarthData login to use this tool.
 
 Useful things to bear in mind:
@@ -46,8 +50,7 @@ Useful things to bear in mind:
 * To download products from NSIDC user `-l NSIDC` or `--provider=NSIDC`.
 * The product must have an indication of the collection following the product name. i.e. ``MCD45A1.005``)
 * The ``--begin`` and ``--end`` flags are optional, and yu can ignore them if you just want the complete year
-* Use the ``--proxy`` option to set the required proxy. It should be read from the environment
-variable, but this is added flexiblity
+* Use the ``--proxy`` option to set the required proxy. It should be read from the environment variable, but this is added flexiblity
 
 The code has some logic not to download files several times, and the overall behaviour rests
 on the ``--quick`` flag: if this flag is **not** set, then the program will look at the remote
