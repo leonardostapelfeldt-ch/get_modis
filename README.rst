@@ -34,9 +34,11 @@ Example commands to download version 6 of the MOD10A1 or MOD09GA products, held 
 
 $ ./get_modis.py -u <earthdata_username> -P <earthdata_password> -s MOST -l NSIDC -t h16v02 -b 200 -e 202 -y 2016 -v -p MOD10A1.006
 
-$ ./get_modis.py -u horst.machguth@unifr.ch -P <earthdata_password> -s MOST -l NSIDC -t h16v02 -b 200 -e 202 -y 2016 -o /home/horstm/erc/sat_modis_raw -v -p MOD10A1.006
+$ ./get_modis.py -u <earthdata_username> -P <earthdata_password> -s MOST -l NSIDC -t h16v02 -b 200 -e 202 -y 2016 -o /home/horstm/erc/sat_modis_raw -v -p MOD10A1.006
 
-$ ./get_modis.py -u horst.machguth@unifr.ch -P <earthdata_password> -s MOLT -l USGS -t h16v02 -b 200 -e 202 -y 2016 -o /home/horstm/erc/sat_modis_raw -v -p MOD09GA.006
+$ ./get_modis.py -u <earthdata_username> -P <earthdata_password> -s MOLT -l USGS -t h16v02 -b 200 -e 202 -y 2016 -o /home/horstm/erc/sat_modis_raw -v -p MOD09GA.006
+
+$ ./get_modis.py -u <earthdata_username> -P <earthdata_password> -s MOLT -l USGS -t h30v12 -b 75 -e 100 -y 2020 -o C:/horst/teaching/SGG.00273 -v -p MOD13A1.006
 
 To download MODIS Terra 250 m 15 days NDVI product:
 
