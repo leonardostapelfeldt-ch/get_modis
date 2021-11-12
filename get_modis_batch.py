@@ -10,13 +10,13 @@ osys = platform.system()
 print('operating system is %s' %osys)
 
 yr_start = 2000
-yr_end = 2020
+yr_end = 2021
 
-d_start = 280  # first day
-d_end = 281  # last day
+d_start = 120  # first day
+d_end = 280  # last day
 
 user = 'horst.machguth@unifr.ch'
-pw = 'Chilchigir_2'
+pw = 'Password'
 
 if osys != 'Windows':
     outdir = '/home/horstm/erc/sat_modis_raw'
@@ -27,6 +27,8 @@ tiles = ['h15v02','h16v01', 'h16v02']
 #tiles = ['h16v01']
 
 years = np.arange(yr_start, yr_end+1, 1)
+
+d_end += 1  # add one as the last element is not downloaded
 
 for t in tiles:
     for y in years:
