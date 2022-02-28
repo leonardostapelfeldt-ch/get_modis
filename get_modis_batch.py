@@ -9,19 +9,19 @@ import platform
 osys = platform.system()
 print('operating system is %s' %osys)
 
-yr_start = 2005
-yr_end = 2005
+yr_start = 2000
+yr_end = 2021
 
 # d_start = 120  # first day
 # d_end = 280  # last day
-d_start = 200  # first day
-d_end = 210  # last day
+d_start = 120  # first day
+d_end = 280  # last day
 
-user = 'horst.machguth@unifr.ch'
-pw = 'password'
+user = 'leonardostapelfeldt@gmail.com'
+pw = 'Unifrproject1'
 
 if osys != 'Windows':
-    outdir = '/home/horstm/erc/sat_modis_raw'
+    outdir = '/Volumes/Windows/Unifr/modis_raw'
 else:
     outdir = r'N:/MODIS/sat_modis_raw/MOD10A1'
 
@@ -36,7 +36,7 @@ for t in tiles:
     for y in years:
         # Crop using gdalwarp
         if osys != 'Windows':
-            cmd = '/home/horstm/src/get_modis/get_modis.py -u ' + user +\
+            cmd = '/Users/leonardostapelfeldt/PycharmProjects/get_modis/get_modis.py -u ' + user +\
                    ' -P ' + pw + ' -s MOST -l NSIDC -t ' + t +\
                    ' -b ' + str(d_start) + ' -e ' + str(d_end) + ' -y ' + str(int(y)) +\
                    ' -o ' + outdir + ' -v -p MOD10A1.006'
