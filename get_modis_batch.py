@@ -9,7 +9,7 @@ import platform
 osys = platform.system()
 print('operating system is %s' %osys)
 
-yr_start = 2000
+yr_start = 2012
 yr_end = 2021
 
 # d_start = 120  # first day
@@ -25,8 +25,9 @@ if osys != 'Windows':
 else:
     outdir = r'N:/MODIS/sat_modis_raw/MOD10A1'
 
-# tiles = ['h15v02','h16v01', 'h16v02']
-tiles = ['h17v00', 'h17v01']
+# tiles = ['h15v02','h16v01','h16v02','h17v00']
+tiles = ['h17v01']
+# tiles = ['h17v00','h17v01']       this was the original line 29
 
 years = np.arange(yr_start, yr_end+1, 1)
 
